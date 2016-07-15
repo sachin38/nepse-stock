@@ -8,4 +8,4 @@ Libraries required
 
 Usage
 ============
-   Insert your company's stock symbol and get the information about stocks 
+    Insert your company's stock symbol and get the information about stocks 
