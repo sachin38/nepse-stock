@@ -1,6 +1,6 @@
 # nepse-stock
 
-###You can use this script to keep track of Nepal Stock.
+### You can use this script to keep track of Nepal Stock.
 
 Libraries required
 ===================
