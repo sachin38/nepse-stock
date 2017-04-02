@@ -21,8 +21,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 from bs4 import BeautifulSoup
 import requests
 
-print "Enter the stock Symbol: ",
-symbol = raw_input()
+symbol = raw_input("Enter the stock Symbol: ")
 url = "http://www.nepalstock.com/company/"
 req = requests.post(url, data={"stock_symbol":symbol}, verify=False)
 response = req.text
