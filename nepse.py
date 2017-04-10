@@ -23,7 +23,13 @@ import requests
 
 symbol = raw_input("Enter the stock Symbol: ")
 url = "http://www.nepalstock.com/company/"
-req = requests.post(url, data={"stock_symbol":symbol}, verify=False)
+
+try:
+    req = requests.post(url, data={"stock_symbol":symbol}, verify=False)
+except requests.exceptions.RequestException as e:
+    print e
+    sys.exit(1)
+
 response = req.text
 soup = BeautifulSoup(response, "lxml")
 table = soup.find("table")
