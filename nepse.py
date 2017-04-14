@@ -21,10 +21,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 from bs4 import BeautifulSoup
 import requests
 
+# asking for stock symbol
 symbol = raw_input("Enter the stock Symbol: ")
 url = "http://www.nepalstock.com/company/"
 
 try:
+    #make post requests with that symbol and capture it in req 
     req = requests.post(url, data={"stock_symbol":symbol}, verify=False)
 except requests.exceptions.RequestException as e:
     print e
