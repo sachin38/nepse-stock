@@ -1,4 +1,3 @@
-Company Symbol
 ACEDBL
 ACEDPO
 ADBL
