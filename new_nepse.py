@@ -25,7 +25,7 @@ def fetchdata(symbols):
         print col[0].string,": ",col[1].string
         datas.append(col[1].string)
         
-    #write_to_csv(datas)
+    write_to_csv(datas)
     datas[:] = []
 
 def write_to_csv(received_data = [], *args):
@@ -46,7 +46,9 @@ def write_to_csv(received_data = [], *args):
 line_list = []
 with open("symbols.txt", "r") as filet:
     for line in filet:
+        line = line[:-1]
         line_list.append(line)
 for text in line_list:
-    print type(text)
+    #print line_list 
     fetchdata(text)
+    print "\n"
