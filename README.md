@@ -19,4 +19,8 @@ Installing Libraries
 
 Usage
 ============
-    Insert your company's stock symbol and get the information about stocks
+    Insert your company's stock symbol and get the information about stock
+    
+    nepse_csv.py
+    ===============
+        this script will read symbols from symbols.txt, fetch stock data and store in datafile.csv
