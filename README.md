@@ -1,6 +1,8 @@
 # nepse-stock
 This...
+
 ![Screenshot1](screenshot1.png)
+
 to this....
 ![Screenshot2](screenshot2.png)
 
