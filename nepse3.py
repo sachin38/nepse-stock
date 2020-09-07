@@ -9,23 +9,12 @@ def main():
     req = requests.post(url,data=param,verify=False) # Sending Post request
     response = req.text
     soup = BeautifulSoup(response,"lxml")
-    table_data = soup.find("table")
-    print("\n=========================================\n")
-    print("Company: "+table_data.findAll("td")[0].string)
-    print("\n=========================================\n")
-
-    for row in table_data.findAll("tr"):
+    
+    table = soup.find("table")
+    print("\n")
+    print("Company:"+table.findAll("td")[0].string)
+    for row in table.findAll("tr")[4:]:
         col = row.findAll("td")
-        element = 0
-        for data in col :
-            print(data.string,end="")
-            element += 1
-
-            if element == 2:
-                break
-
-            print(" : ",end="")
-
-        print("\n")
+        print(col[0].string+" :"+col[1].string)
 
 main()
